@@ -7,13 +7,17 @@
 创建 Cloud9 环境, 步骤如下面截图所示:
 
 [步骤-1]
+
 ![create-cloud9-1](../image/cloud9/create-cloud9-1.jpg)
 
 [步骤-2]
+
 ![create-cloud9-2](../image/cloud9/create-cloud9-2.jpg)
 
 [步骤-3]
+
 ![create-cloud9-3](../image/cloud9/create-cloud9-3.jpg)
+
 
 创建完成后，会自动进入 Cloud9 IDE 环境：
 
