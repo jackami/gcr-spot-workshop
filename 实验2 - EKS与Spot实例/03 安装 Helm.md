@@ -1,5 +1,7 @@
 # 安装 Helm
 
+[Helm](https://helm.sh/)是 Kubernetes 的软件包管理器和应用程序管理工具，可将多个 Kubernetes 资源打包到一个称为 Chart 的逻辑部署单元中。
+
 执行如下安装命令. 
 (注意不要执行 'helm init'. 如果不小心执行, 可以通过执行 'helm reset –force' 进行restore.)
 
