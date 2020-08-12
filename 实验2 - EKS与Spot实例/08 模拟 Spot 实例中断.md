@@ -147,6 +147,8 @@ sudo ifconfig lo:0 169.254.169.254 up
 sudo socat TCP4-LISTEN:80,fork TCP4:127.0.0.1:32752 >/dev/null 2>&1 &
 ```
 
-切换到 kube-ops-view 视图, 可以看到当前 Spot 工作节点上的 POD 被驱逐处于等待调度状态。这是因为当前 Spot 工作节点上的 aws-node-termination-handler 组件监听到  ec2-spot-termination-simulator 服务返回的模拟的实例收回信息, 从而通知 EKS 集群的控制平面进行对当前节点执行 cordon 和 drain 操作。 如下图所示：
+切换到 kube-ops-view 视图, 可以看到当前 Spot 工作节点上的 Pod 被驱逐处于等待调度状态。这是因为当前 Spot 工作节点上的 aws-node-termination-handler 组件监听到  ec2-spot-termination-simulator 服务返回的模拟的实例收回信息, 从而通知 EKS 集群的控制平面进行对当前节点执行 cordon 和 drain 操作。 如下图所示：
 
-![spoteviction](../image/eks-spot/spoteviction.png)
+![spoteviction](../image/eks-spot/spoteviction.jpg)
+
+随后可见被驱逐的 Pod 在另外一台 Spot 实例上被重新创建和运行起来。
