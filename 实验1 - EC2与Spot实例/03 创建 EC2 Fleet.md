@@ -33,12 +33,11 @@ service httpd start
 ```
 ![](../image/ec2-spot/sfUserdata.jpeg)
 
-9 .您需要创建一个 Tag，点击**创建标签**，**键**设置为 loadBalancerTargetGroup，
-**值**设置为 ALB 的 ARN，点击**创建**
+9 .您需要创建一个 Tag，**创建标签**，**键**设置为 loadBalancerTargetGroup，**值**设置为 TargetGroup 的 ARN，并勾选**实例**选项，点击**创建**
 
 ![](../image/ec2-spot/sfTag.jpeg)
 
-![](../image/ec2-spot/createTag.jpeg)
+![](../image/ec2-spot/CreateTag.jpeg)
 
 10.在**告诉我们您需要多少容量**面板中，把**总目标容量**设置为 2，**可选按需部分**保持默认值 0。选中**保持目标容量**，**中断行为**选择**终止**。
 

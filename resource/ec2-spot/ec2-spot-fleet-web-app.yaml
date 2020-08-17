@@ -58,6 +58,10 @@ Outputs:
       Fn::GetAtt:
       - spotFleetRole
       - Arn
+  TargetGroupARN:
+    Description: TargetGroup ARN
+    Value:
+      Ref: TargetGroup
   LoadBalancerARN:
     Description: Load Balancer ARN
     Value:
@@ -318,7 +322,7 @@ Resources:
   LoadBalancer:
     DependsOn:
     - publicSubnet1
-    - publicSubnet1
+    - publicSubnet2
     - loadBalancerSecurityGroup
     Properties:
       Scheme: internet-facing
