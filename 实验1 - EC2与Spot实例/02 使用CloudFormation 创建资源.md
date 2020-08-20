@@ -26,7 +26,7 @@ aws cloudformation describe-stacks --stack-name ec2-spot-fleet-web-app --query '
 使用 CLI 命令查询 ALB 的 ARN 和 DNS Name, 把结果保存下来
 	
 ```
-aws cloudformation describe-stacks --stack-name ec2-spot-fleet-web-app --query 'Stacks[0].Outputs[?OutputKey==`TargetGroupARN` || OutputKey==`LoadBalancerDNSName`].{Key:OutputKey,Value:OutputValue}' 
+aws cloudformation describe-stacks --stack-name ec2-spot-fleet-web-app --query 'Stacks[0].Outputs[?OutputKey==`TargetGroupARN` || OutputKey==`LoadBalancerDNSName`].{Key:OutputKey,Value:OutputValue}'
 ```
 	
 也可以从 CloudFormation 的界面中查询 ARN 和 DNS Name
